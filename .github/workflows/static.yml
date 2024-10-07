@@ -18,5 +18,5 @@ jobs:
            echo "${{secrets.KEY_G}}" > webserver && chmod 600 webserver
            ssh -o StrictHostKeyChecking=no -i "webserver" ubuntu@ec2-54-243-52-244.compute-1.amazonaws.com "
                cd /var/www/html &&
-               git pull "
+               sudo git pull "
                
