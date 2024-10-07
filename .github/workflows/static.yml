@@ -16,7 +16,7 @@ jobs:
       - name: Acesso EC2
         run: |
            echo "${{secrets.KEY_G}}" > webserver && chmod 600 webserver
-           ssh -o StrictHostKeyChecking=no -i "webserver" ubuntu@ec2-54-243-52-244.compute-1.amazonaws.com "
+           ssh -o StrictHostKeyChecking=no -i webserver ubuntu@ec2-54-243-52-244.compute-1.amazonaws.com "
                cd /var/www/html &&
-               sudo git pull "
+               git pull "
                
